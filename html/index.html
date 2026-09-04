@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAD — сайты с характером</title>
+  <meta name="description" content="Концепция, структура, дизайн, сборка. От первой идеи до готовой страницы." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="header">
+    <a class="logo" href="#top">NAD</a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+    <label class="burger" for="nav-toggle" aria-label="Меню">
+      <span></span>
+    </label>
+    <nav class="nav">
+      <a href="#process">Процесс</a>
+      <a href="#projects">Работы</a>
+      <a href="#why">Почему я</a>
+      <a href="#tools">Стек</a>
+      <a href="#contact">Контакт</a>
+    </nav>
+    <a class="header-cta" href="https://t.me/yourname" target="_blank" rel="noopener">Написать</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img src="../images/hero-atmosphere.png" alt="" />
+      </div>
+      <div class="hero-content">
+        <figure class="hero-portrait">
+          <img src="../images/portrait.png" alt="NAD — портрет" />
+        </figure>
+        <div class="hero-copy">
+          <p class="kicker">ДИЗАЙН · ТЕХНОЛОГИИ · АТМОСФЕРА</p>
+          <h1
+            class="text-type"
+            data-text-type
+            data-texts="Создаю сайты,\nв которых есть\nэнергия и характер"
+            data-typing-speed="75"
+            data-deleting-speed="50"
+            data-pause-duration="1500"
+            data-cursor-blink="0.5"
+            data-cursor-character="_"
+          >Создаю сайты,
+в которых есть
+<em>энергия и характер</em></h1>
+          <p class="hero-lead">
+            Не просто красивый дизайн, а продуманная структура. Сайт, который запоминается.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://t.me/yourname" target="_blank" rel="noopener">Обсудить проект</a>
+            <a class="btn btn-ghost" href="#projects">Посмотреть работы</a>
+          </div>
+          <div class="hero-meta">
+            <span>Концепция</span>
+            <span>Структура</span>
+            <span>Дизайн</span>
+            <span>Сборка</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="section-head" data-reveal>
+        <p class="kicker">01 — Метод</p>
+        <h2>Как я работаю</h2>
+      </div>
+      <div class="process-grid">
+        <article class="process-card" data-reveal>
+          <span class="num">01</span>
+          <h3>Сначала идея</h3>
+          <p>Я определяю задачу, настроение и впечатление, которое должен передать проект.</p>
+        </article>
+        <article class="process-card" data-reveal>
+          <span class="num">02</span>
+          <h3>Затем структура</h3>
+          <p>Продумываю смысл, последовательность блоков и логику сайта.</p>
+        </article>
+        <article class="process-card" data-reveal>
+          <span class="num">03</span>
+          <h3>Потом реализация</h3>
+          <p>Когда есть стиль и логика, проект собирается быстрее, точнее и выглядит сильно.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-head" data-reveal>
+        <p class="kicker">02 — Кейсы</p>
+        <h2>Избранные проекты</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project" data-reveal>
+          <div class="project-visual">
+            <img src="../images/project-landing.png" alt="Превью лендинга для цифрового продукта" />
+          </div>
+          <div class="project-body">
+            <span class="project-index">01</span>
+            <h3>Лендинг для цифрового продукта</h3>
+            <p>Современная страница для представления продукта или услуги.</p>
+            <p class="done">Что сделано: структура, тексты, дизайн, сборка.</p>
+          </div>
+        </article>
+
+        <article class="project" data-reveal>
+          <div class="project-visual">
+            <img src="../images/project-portfolio.png" alt="Превью личного сайта-портфолио" />
+          </div>
+          <div class="project-body">
+            <span class="project-index">02</span>
+            <h3>Личный сайт-портфолио</h3>
+            <p>Личный сайт, который показывает опыт, навыки и стиль специалиста.</p>
+            <p class="done">Что сделано: позиционирование, подача, дизайн, оформление работ.</p>
+          </div>
+        </article>
+
+        <article class="project" data-reveal>
+          <div class="project-visual">
+            <img src="../images/project-funnel.png" alt="Превью промо-страницы для воронки" />
+          </div>
+          <div class="project-body">
+            <span class="project-index">03</span>
+            <h3>Промо-страница для воронки</h3>
+            <p>Промо-страница под воронку и digital-продукт с акцентом на конверсию и лёгкость восприятия.</p>
+            <p class="done">Что сделано: логика блоков, тексты, CTA, визуальный каркас.</p>
+          </div>
+        </article>
+
+        <article class="project" data-reveal>
+          <div class="project-visual">
+            <img src="../images/project-ai-creator.png" alt="Превью сайта для AI-креатора" />
+          </div>
+          <div class="project-body">
+            <span class="project-index">04</span>
+            <h3>Сайт для AI-креатора</h3>
+            <p>Современный сайт для специалиста, который использует AI-технологии.</p>
+            <p class="done">Что сделано: структура, визуальная идея, дизайн.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section why" id="why">
+      <div class="section-head" data-reveal>
+        <p class="kicker">03 — Подход</p>
+        <h2>Мой подход — видеть проект целиком</h2>
+      </div>
+      <div class="why-layout">
+        <div class="why-copy" data-reveal>
+          <p class="why-lead">Я думаю не только о том, как собрать сайт, но и о том:</p>
+          <div class="why-cols">
+            <ul>
+              <li>как представить идею</li>
+              <li>что привлечёт внимание</li>
+              <li>как сайт будет восприниматься</li>
+              <li>что запомнит посетитель</li>
+              <li>как подчеркнуть ценность проекта</li>
+            </ul>
+          </div>
+          <p class="formula">Я соединяю: эстетику + понятную структуру + современные технологии + скорость</p>
+        </div>
+        <figure class="why-photo" data-reveal="fade">
+          <img src="../images/approach-workspace.png" alt="Атмосфера рабочей среды" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="tools">
+      <div class="section-head" data-reveal>
+        <p class="kicker">04 — Стек</p>
+        <h2>Инструменты</h2>
+      </div>
+      <div class="badges">
+        <span data-reveal data-glow="lime">ChatGPT</span>
+        <span data-reveal data-glow="orange">Cursor</span>
+        <span data-reveal data-glow="lime">HTML / CSS / JS</span>
+        <span data-reveal data-glow="orange">Figma</span>
+        <span data-reveal data-glow="lime">Tilda / Webflow / custom</span>
+        <span data-reveal data-glow="orange">Telegram / Bots / AI tools</span>
+      </div>
+      <p class="tools-note" data-reveal>Но главный инструмент — не технологии, а вкус, внимание к деталям и умение создавать цельное впечатление.</p>
+    </section>
+
+    <section class="section" id="audience">
+      <div class="section-head" data-reveal>
+        <p class="kicker">05 — Аудитория</p>
+        <h2>Кому подойдёт моя работа</h2>
+      </div>
+      <ul class="audience">
+        <li data-reveal>экспертам</li>
+        <li data-reveal>креаторам</li>
+        <li data-reveal>digital-проектам</li>
+        <li data-reveal>AI-продуктам</li>
+        <li data-reveal>студиям</li>
+        <li data-reveal>тем, кому нужен сайт с характером</li>
+        <li data-reveal>тем, кто ценит индивидуальный подход</li>
+      </ul>
+    </section>
+
+    <section class="manifesto" id="manifesto" data-reveal="scale">
+      <p>
+        Хороший сайт — это
+        <em> когда идея обрела форму и начала работать.</em>
+      </p>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+      <div class="section-head" data-reveal>
+        <p class="kicker">06 — Отзывы</p>
+        <h2>Что говорят после запуска</h2>
+      </div>
+
+      <div class="testimonials-shell" data-reveal>
+        <article class="testimonial-panel is-active" aria-live="polite">
+          <span class="testimonial-mark" aria-hidden="true">“</span>
+          <blockquote class="testimonial-quote"></blockquote>
+          <footer class="testimonial-meta">
+            <p class="testimonial-name"></p>
+            <p class="testimonial-role"></p>
+          </footer>
+        </article>
+
+        <div class="testimonials-controls">
+          <div class="testimonial-cards" role="tablist" aria-label="Отзывы клиентов"></div>
+          <div class="testimonials-nav">
+            <button class="testimonial-arrow testimonial-arrow--prev" type="button" aria-label="Предыдущий отзыв">←</button>
+            <div class="testimonial-dots" role="tablist" aria-label="Выбор отзыва"></div>
+            <button class="testimonial-arrow testimonial-arrow--next" type="button" aria-label="Следующий отзыв">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="cta" data-reveal>
+      <div class="cta-glow" aria-hidden="true"></div>
+      <h2>Стильный дизайн и понятная структура. Сайт, который работает на результат — <em>от первой идеи до запуска.</em></h2>
+      <p>Помогу с концепцией, структурой, текстами, дизайном.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://t.me/yourname" target="_blank" rel="noopener">Обсудить проект</a>
+        <a class="btn btn-ghost" href="#projects">Посмотреть работы</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+      <p class="footer-brand">NAD</p>
+      <div class="footer-contacts">
+        <a href="https://t.me/yourname" target="_blank" rel="noopener">Telegram: @yourname</a>
+        <a href="mailto:hello@yourmail.com">Email: hello@yourmail.com</a>
+      </div>
+    </div>
+    <p class="copy">© 2026 · сайты с характером</p>
+  </footer>
+  <script src="../js/text-type.js" defer></script>
+  <script src="../js/reveal.js" defer></script>
+  <script src="../js/testimonials.js" defer></script>
+</body>
+</html>
