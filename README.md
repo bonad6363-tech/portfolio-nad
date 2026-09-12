@@ -20,9 +20,8 @@
 ## Структура
 
 ```
-ПОРТФОЛИО/
-├── html/
-│   └── index.html
+portfolio-nad/
+├── index.html            # главная страница (нужна в корне для GitHub Pages)
 ├── css/
 │   └── style.css
 ├── js/
@@ -34,15 +33,9 @@
 
 ## Как открыть
 
-1. Открой файл `html/index.html` в браузере  
+1. Открой файл `index.html` в браузере  
    или  
-2. Запусти локальный сервер из корня проекта:
-
-```bash
-npx serve .
-```
-
-Затем перейди на страницу с `html/index.html`.
+2. Сайт на GitHub Pages: https://bonad6363-tech.github.io/portfolio-nad/
 
 ## Стек
 
