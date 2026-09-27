@@ -8,21 +8,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=compose7" />
+  <link rel="stylesheet" href="css/style.css?v=laptopShadow1" />
+  <link rel="stylesheet" href="css/mobile.css?v=laptopShadow1" />
 </head>
 <body>
   <div class="page-grid" aria-hidden="true"></div>
 
   <header class="header">
     <a class="logo" href="#top">Pulse</a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+    <label class="burger" for="nav-toggle" aria-label="Открыть меню">
+      <span></span>
+    </label>
     <nav class="nav" aria-label="Навигация">
       <a href="#who">Кому</a>
       <a href="#how">Как работает</a>
       <a href="#inside">Формат</a>
       <a href="#situations">Ситуации</a>
-      <a href="#book">Записаться</a>
+      <a class="nav-cta" href="#book">Записаться</a>
     </nav>
-    <a class="btn btn-primary btn-sm" href="https://t.me/NadezdaBoriskina" target="_blank" rel="noopener">Записаться</a>
+    <a class="btn btn-primary btn-sm header-cta" href="https://t.me/NadezdaBoriskina" target="_blank" rel="noopener">Записаться</a>
   </header>
 
   <main id="top">
@@ -142,7 +147,7 @@
     <section class="section section--who" id="who">
       <div class="section-head who-head" data-reveal>
         <p class="eyebrow who-eyebrow">Для кого</p>
-        <h2>Кому подходит Pulse</h2>
+        <h2>Кому подходит <span class="brand-word">Pulse</span></h2>
         <p class="section-lead who-lead">Если вы продаёте экспертизу, а не товар с витрины.</p>
       </div>
 
@@ -150,8 +155,8 @@
         <div class="who-cards">
           <article class="who-card who-card--mint" data-reveal>
             <span class="who-num">01</span>
-            <div class="who-card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="#fff" stroke-width="1.8"/><path d="M5 19c1.5-3.4 4-4.9 7-4.9s5.5 1.5 7 4.9" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <div class="who-card-visual" aria-hidden="true">
+              <img src="images/who-expert-3d.png" alt="" width="220" height="165" loading="lazy" decoding="async">
             </div>
             <h3>Экспертам</h3>
             <p>Коучи, консультанты, наставники — нужен простой вход в запись, а не длинные воронки.</p>
@@ -164,8 +169,8 @@
 
           <article class="who-card who-card--sun" data-reveal>
             <span class="who-num">02</span>
-            <div class="who-card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.2" stroke="#fff" stroke-width="1.8"/><path d="M10 8.8l5.8 3.2L10 15.2V8.8z" fill="#fff" stroke="#fff" stroke-width="0.6" stroke-linejoin="round"/></svg>
+            <div class="who-card-visual" aria-hidden="true">
+              <img src="images/who-creator-3d.png" alt="" width="220" height="165" loading="lazy" decoding="async">
             </div>
             <h3>Креаторам</h3>
             <p>Разборы, эфиры, мини-продукты — страница, которая ведёт к одному действию.</p>
@@ -178,8 +183,8 @@
 
           <article class="who-card who-card--coral" data-reveal>
             <span class="who-num">03</span>
-            <div class="who-card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 18V7M10 18v-6M14 18V9M18 18v-9" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <div class="who-card-visual" aria-hidden="true">
+              <img src="images/who-digital-3d.png" alt="" width="220" height="165" loading="lazy" decoding="async">
             </div>
             <h3>Digital-проектам</h3>
             <p>Запуск услуги или пилота без сложной воронки и десятка экранов.</p>
@@ -191,88 +196,81 @@
           </article>
         </div>
 
-        <aside class="who-deco" aria-hidden="true" data-reveal>
-          <span class="who-deco-orb who-deco-orb--peach"></span>
-          <span class="who-deco-orb who-deco-orb--mint"></span>
-          <span class="who-deco-ring"></span>
-          <span class="who-pulse-ring"></span>
-          <span class="who-pulse-ring who-pulse-ring--delay"></span>
+        <aside class="who-deco" data-reveal>
+          <span class="who-deco-orb who-deco-orb--peach" aria-hidden="true"></span>
+          <span class="who-deco-orb who-deco-orb--mint" aria-hidden="true"></span>
 
-          <svg class="who-deco-line" viewBox="0 0 280 400" fill="none" preserveAspectRatio="xMidYMid meet">
-            <defs>
-              <linearGradient id="whoPulseGrad" x1="205" y1="320" x2="210" y2="95" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#FF6846"/>
-                <stop offset="0.45" stop-color="#F5B73B"/>
-                <stop offset="1" stop-color="#27C7A5"/>
-              </linearGradient>
-              <filter id="whoNodeGlow" x="-160%" y="-160%" width="420%" height="420%">
-                <feGaussianBlur stdDeviation="3.2" result="b"/>
-                <feMerge>
-                  <feMergeNode in="b"/>
-                </feMerge>
-              </filter>
-            </defs>
-            <!-- Старт у Digital (снизу справа) → коридор между карточками → Креатор → Эксперт -->
-            <path
-              d="M205 318 C 170 285, 125 255, 108 200 S 145 145, 155 165 S 185 120, 212 98"
-              stroke="url(#whoPulseGrad)"
-              stroke-width="3.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              opacity="0.95"
-            />
-            <g filter="url(#whoNodeGlow)" opacity="0.5">
-              <circle cx="205" cy="318" r="11" fill="#FF6846"/>
-              <circle cx="108" cy="200" r="11" fill="#F5B73B"/>
-              <circle cx="212" cy="98" r="11" fill="#27C7A5"/>
-            </g>
-            <circle cx="205" cy="318" r="8.5" fill="#FF6846"/>
-            <circle cx="205" cy="318" r="3.5" fill="#FFFFFF"/>
-            <circle cx="108" cy="200" r="8.5" fill="#F5B73B"/>
-            <circle cx="108" cy="200" r="3.5" fill="#FFFFFF"/>
-            <circle cx="212" cy="98" r="8.5" fill="#27C7A5"/>
-            <circle cx="212" cy="98" r="3.5" fill="#FFFFFF"/>
-          </svg>
+          <div class="who-process">
+            <p class="who-process-eyebrow">Процесс Pulse</p>
+            <h3 class="who-process-title">От идеи к плану</h3>
 
-          <div class="who-mini who-mini--expert">
-            <span class="who-mini-icon who-mini-icon--mint">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.3" stroke="currentColor" stroke-width="1.7"/><path d="M5 19c1.5-3.3 4-4.8 7-4.8s5.5 1.5 7 4.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-            </span>
-            <span class="who-mini-line"></span>
-            <span class="who-mini-line who-mini-line--short"></span>
-            <span class="who-mini-line who-mini-line--mid"></span>
-          </div>
+            <ol class="who-process-steps">
+              <li class="who-process-step who-process-step--idea">
+                <span class="who-process-node" aria-hidden="true"></span>
+                <div class="who-process-card">
+                  <span class="who-process-num">01</span>
+                  <div>
+                    <p class="who-process-name">Идея</p>
+                    <p class="who-process-hint">Точка входа</p>
+                  </div>
+                </div>
+              </li>
+              <li class="who-process-step who-process-step--analysis">
+                <span class="who-process-node" aria-hidden="true"></span>
+                <div class="who-process-card">
+                  <span class="who-process-num">02</span>
+                  <div>
+                    <p class="who-process-name">Анализ</p>
+                    <p class="who-process-hint">Разбор задачи</p>
+                  </div>
+                </div>
+              </li>
+              <li class="who-process-step who-process-step--structure">
+                <span class="who-process-node" aria-hidden="true"></span>
+                <div class="who-process-card">
+                  <span class="who-process-num">03</span>
+                  <div>
+                    <p class="who-process-name">Структура</p>
+                    <p class="who-process-hint">Сборка блоков</p>
+                  </div>
+                </div>
+              </li>
+              <li class="who-process-step who-process-step--plan">
+                <span class="who-process-node" aria-hidden="true"></span>
+                <div class="who-process-card">
+                  <span class="who-process-num">04</span>
+                  <div>
+                    <p class="who-process-name">План действий</p>
+                    <p class="who-process-hint">Следующий шаг</p>
+                  </div>
+                </div>
+              </li>
+            </ol>
 
-          <div class="who-mini who-mini--creator">
-            <span class="who-mini-icon who-mini-icon--sun">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.8l5.6 3.2-5.6 3.2V8.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-            </span>
-            <span class="who-mini-line"></span>
-            <span class="who-mini-line who-mini-line--mid"></span>
-            <span class="who-mini-line who-mini-line--short"></span>
-          </div>
+            <svg class="who-process-link" viewBox="0 0 24 280" fill="none" aria-hidden="true" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="whoProcessGrad" x1="12" y1="8" x2="12" y2="272" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#27C7A5"/>
+                  <stop offset="0.38" stop-color="#F5B73B"/>
+                  <stop offset="0.68" stop-color="#FF8A4C"/>
+                  <stop offset="1" stop-color="#FF6846"/>
+                </linearGradient>
+              </defs>
+              <path
+                d="M12 10 C 12 50, 6 80, 12 110 C 18 140, 12 170, 12 200 C 12 230, 8 250, 12 270"
+                stroke="url(#whoProcessGrad)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                opacity="0.85"
+              />
+            </svg>
 
-          <div class="who-mini who-mini--digital">
-            <span class="who-mini-icon who-mini-icon--coral">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 18V8M11 18v-5M16 18V10M21 18V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </span>
-            <div class="who-mini-chart" aria-hidden="true">
-              <span style="--h:42%"></span>
-              <span style="--h:68%"></span>
-              <span style="--h:54%"></span>
-              <span style="--h:86%"></span>
+            <div class="who-process-ui who-process-ui--a" aria-hidden="true">
+              <span class="who-process-ui-bar"></span>
+              <span class="who-process-ui-bar who-process-ui-bar--mid"></span>
+              <span class="who-process-ui-bar who-process-ui-bar--short"></span>
             </div>
           </div>
-
-          <span class="who-ball who-ball--mint"></span>
-          <span class="who-ball who-ball--coral"></span>
-          <span class="who-ball who-ball--sun"></span>
-          <span class="who-dot who-dot--a"></span>
-          <span class="who-dot who-dot--b"></span>
-          <span class="who-dot who-dot--c"></span>
-          <span class="who-dot who-dot--d"></span>
-          <span class="who-dot who-dot--e"></span>
-          <span class="who-dot who-dot--f"></span>
         </aside>
       </div>
     </section>
@@ -455,116 +453,295 @@
       </div>
     </section>
 
-    <section class="section" id="inside">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow">Формат</p>
-        <h2>Что внутри разбора</h2>
-        <p class="section-lead">Не общие советы, а ясный следующий шаг.</p>
-      </div>
-
+    <section class="section section--inside" id="inside">
       <div class="inside-layout">
-        <ul class="inside-list">
-          <li data-reveal>
-            <span class="feature-icon feature-icon--mint" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </span>
-            <div>
-              <h3><span class="check-mark check-mark--mint" aria-hidden="true">✓</span> Анализ вашей ситуации</h3>
-              <p>Разбираем задачу, контекст, ресурсы и находим ключевые точки.</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="feature-icon feature-icon--sun" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="1.8"/><path d="M10 8h4M10 12h4M10 16h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </span>
-            <div>
-              <h3><span class="check-mark check-mark--sun" aria-hidden="true">✓</span> Рекомендации и варианты</h3>
-              <p>Даём понятные решения, объясняем плюсы и минусы, показываем примеры.</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="feature-icon feature-icon--coral" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
-            </span>
-            <div>
-              <h3><span class="check-mark check-mark--coral" aria-hidden="true">✓</span> Чёткий план действий</h3>
-              <p>Вы получаете конкретный план под вашу задачу на 7–14 дней.</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="feature-icon feature-icon--mint" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </span>
-            <div>
-              <h3><span class="check-mark check-mark--mint" aria-hidden="true">✓</span> Дополнительные материалы</h3>
-              <p>Шаблоны, ссылки на инструменты и полезные ресурсы.</p>
-            </div>
-          </li>
-        </ul>
+        <div class="inside-copy">
+          <header class="inside-head" data-reveal>
+            <p class="eyebrow">Формат</p>
+            <h2>Что внутри разбора</h2>
+            <p class="section-lead">Не общие советы, а ясный следующий шаг.</p>
+          </header>
 
-        <div class="inside-side" data-reveal>
-          <aside class="result-card">
-            <p class="result-label">Результат</p>
-            <p class="result-text">Вы уходите не с «вдохновением», а с понятным планом и точкой входа в работу.</p>
-            <div class="result-chart" aria-hidden="true">
-              <span class="bar bar-1"></span>
-              <span class="bar bar-2"></span>
-              <span class="bar bar-3"></span>
-              <span class="result-target">◎</span>
+          <ul class="inside-list">
+            <li data-reveal>
+              <span class="inside-icon inside-icon--mint" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.2" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l4.2 4.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </span>
+              <div class="inside-item-body">
+                <h3>
+                  <span class="inside-check inside-check--mint" aria-hidden="true">
+                    <svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.2l2.8 2.8 6.2-6.2" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  Анализ вашей ситуации
+                </h3>
+                <p>Разбираем задачу, контекст, ресурсы и находим ключевые точки.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <span class="inside-icon inside-icon--sun" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M7 3.5h7l5 5V20.5H7V3.5z" stroke="currentColor" stroke-width="1.7"/><path d="M14 3.5V8.5h5M10 12h6M10 15.5h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </span>
+              <div class="inside-item-body">
+                <h3>
+                  <span class="inside-check inside-check--sun" aria-hidden="true">
+                    <svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.2l2.8 2.8 6.2-6.2" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  Рекомендации и варианты
+                </h3>
+                <p>Даём понятные решения, объясняем плюсы и минусы, показываем примеры.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <span class="inside-icon inside-icon--coral" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="7.2" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="2.8" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.8v2.2M12 19v2.2M2.8 12h2.2M19 12h2.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </span>
+              <div class="inside-item-body">
+                <h3>
+                  <span class="inside-check inside-check--coral" aria-hidden="true">
+                    <svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.2l2.8 2.8 6.2-6.2" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  Чёткий план действий
+                </h3>
+                <p>Вы получаете конкретный план под вашу задачу на 7–14 дней.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <span class="inside-icon inside-icon--mint" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 8.4a3.6 3.6 0 100 7.2 3.6 3.6 0 000-7.2z" stroke="currentColor" stroke-width="1.7"/><path d="M12 3.2v2M12 18.8v2M3.2 12h2M18.8 12h2M5.7 5.7l1.45 1.45M16.85 16.85l1.45 1.45M16.85 7.15l1.45-1.45M5.7 18.3l1.45-1.45" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </span>
+              <div class="inside-item-body">
+                <h3>
+                  <span class="inside-check inside-check--mint" aria-hidden="true">
+                    <svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.2l2.8 2.8 6.2-6.2" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  Дополнительные материалы
+                </h3>
+                <p>Шаблоны, ссылки на инструменты и полезные ресурсы.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="inside-visual">
+          <aside class="result-card" data-reveal>
+            <div class="result-copy">
+              <p class="result-label">Результат</p>
+              <p class="result-text">Вы уходите не с «вдохновением», а с <em class="result-em">понятным планом</em> и точкой входа в работу.</p>
+            </div>
+            <div class="result-visual" aria-hidden="true">
+              <span class="result-target">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="7.2" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="2.8" stroke="currentColor" stroke-width="1.7"/></svg>
+              </span>
+              <span class="result-divider"></span>
+              <div class="result-chart">
+                <span class="result-bar result-bar--1"></span>
+                <span class="result-bar result-bar--2"></span>
+                <span class="result-bar result-bar--3"></span>
+              </div>
             </div>
           </aside>
 
-          <div class="orbit" aria-hidden="true">
-            <div class="orbit-ring"></div>
-            <div class="orbit-card orbit-card--main">
-              <span class="dot dot--mint"></span>
-              <span class="dot dot--sun"></span>
-              <span class="dot dot--coral"></span>
+          <div class="inside-stage" aria-hidden="true" data-reveal>
+            <span class="inside-stage-grid"></span>
+            <span class="inside-stage-orb inside-stage-orb--mint"></span>
+            <span class="inside-stage-orb inside-stage-orb--peach"></span>
+            <span class="inside-stage-ring"></span>
+
+            <svg class="inside-pulse-line" viewBox="0 0 420 340" fill="none" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <linearGradient id="insidePulseGrad" x1="60" y1="40" x2="360" y2="300" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#27C7A5"/>
+                  <stop offset="0.5" stop-color="#F5B73B"/>
+                  <stop offset="1" stop-color="#FF6846"/>
+                </linearGradient>
+                <filter id="insideNodeGlow" x="-120%" y="-120%" width="340%" height="340%">
+                  <feGaussianBlur stdDeviation="3.5" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <path class="inside-pulse-path" pathLength="1" d="M70 60 C 140 20, 250 35, 320 95 C 370 140, 380 210, 340 265 C 300 315, 200 330, 120 290" stroke="url(#insidePulseGrad)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+              <g filter="url(#insideNodeGlow)">
+                <circle class="inside-node inside-node--1" cx="70" cy="60" r="7" fill="#27C7A5"/>
+                <circle class="inside-node inside-node--2" cx="320" cy="95" r="6.5" fill="#F5B73B"/>
+                <circle class="inside-node inside-node--3" cx="340" cy="265" r="7" fill="#FF6846"/>
+                <circle class="inside-node inside-node--4" cx="120" cy="290" r="6" fill="#27C7A5"/>
+              </g>
+            </svg>
+
+            <div class="inside-checklist">
+              <span class="inside-checklist-row"><i class="inside-cl-check inside-cl-check--mint"></i><i class="inside-cl-bar"></i></span>
+              <span class="inside-checklist-row"><i class="inside-cl-check inside-cl-check--sun"></i><i class="inside-cl-bar inside-cl-bar--mid"></i></span>
+              <span class="inside-checklist-row"><i class="inside-cl-check inside-cl-check--coral"></i><i class="inside-cl-bar inside-cl-bar--short"></i></span>
             </div>
-            <div class="orbit-card orbit-card--a"></div>
-            <div class="orbit-card orbit-card--b"></div>
-            <div class="orbit-card orbit-card--c"></div>
+
+            <div class="inside-float inside-float--chart">
+              <span class="inside-mini-bars"><i></i><i></i><i></i></span>
+            </div>
+            <div class="inside-float inside-float--bulb">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 18h6M10 21h4M12 3a5 5 0 015 5c0 2-1 3.5-2.5 4.5S12 15 12 15s-1-.5-2.5-2.5S7 10 7 8a5 5 0 015-5z" stroke="#E09B2D" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </div>
+            <div class="inside-float inside-float--pie">
+              <svg viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="12" stroke="rgba(39,199,165,0.25)" stroke-width="5"/>
+                <circle cx="20" cy="20" r="12" stroke="#27C7A5" stroke-width="5" stroke-dasharray="50 76" stroke-linecap="round" transform="rotate(-90 20 20)"/>
+              </svg>
+            </div>
+            <div class="inside-float inside-float--cal">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5" width="17" height="15" rx="2.2" stroke="#FF6846" stroke-width="1.7"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke="#FF6846" stroke-width="1.7" stroke-linecap="round"/><circle cx="9" cy="14.5" r="1.1" fill="#FF6846"/><circle cx="12.5" cy="14.5" r="1.1" fill="#FF6846"/><circle cx="16" cy="14.5" r="1.1" fill="#FF6846"/></svg>
+            </div>
+
+            <span class="inside-dot inside-dot--a"></span>
+            <span class="inside-dot inside-dot--b"></span>
+            <span class="inside-dot inside-dot--c"></span>
+            <span class="inside-dot inside-dot--d"></span>
+
+            <span class="inside-plant inside-plant--left"></span>
+            <span class="inside-plant inside-plant--right"></span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="situations">
-      <div class="section-head" data-reveal>
+    <section class="section section--situations" id="situations">
+      <header class="sit-head" data-reveal>
         <p class="eyebrow">Ситуации</p>
         <h2>С чем можно прийти на разбор</h2>
         <p class="section-lead">Любая точка, где нужна ясность, структура и следующий шаг.</p>
-      </div>
+      </header>
 
-      <div class="situations-row">
-        <article class="sit-card" data-reveal>
-          <span class="sit-icon sit-icon--mint" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18h6M10 21h4M12 3a5 5 0 015 5c0 2-1 3.5-2.5 4.5S12 15 12 15s-1-.5-2.5-2.5S7 10 7 8a5 5 0 015-5z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-          </span>
-          <p>Есть идея, но непонятно, с чего начать</p>
-        </article>
-        <article class="sit-card" data-reveal>
-          <span class="sit-icon sit-icon--sun" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v13H7V3z" stroke="currentColor" stroke-width="1.7"/><path d="M14 3v5h5" stroke="currentColor" stroke-width="1.7"/></svg>
-          </span>
-          <p>Есть услуга, но сложно её упаковать</p>
-        </article>
-        <article class="sit-card" data-reveal>
-          <span class="sit-icon sit-icon--coral" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 19V5M4 19h16M8 14v5M12 10v9M16 7v12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-          </span>
-          <p>Есть проект, который «застрял»</p>
-        </article>
-        <article class="sit-card" data-reveal>
-          <span class="sit-icon sit-icon--mint" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 3h6v8a5 5 0 11-6 0V3zM8 21h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-          </span>
-          <p>Нужно быстро проверить гипотезу</p>
-        </article>
-        <div class="sit-result" data-reveal>
-          <div class="sit-target" aria-hidden="true">✓</div>
-          <p><strong>Разбор</strong><br />Ясный план и уверенный следующий шаг</p>
+      <div class="sit-board">
+        <span class="sit-board-grid" aria-hidden="true"></span>
+        <span class="sit-board-orb sit-board-orb--mint" aria-hidden="true"></span>
+        <span class="sit-board-orb sit-board-orb--peach" aria-hidden="true"></span>
+
+        <div class="sit-cards">
+          <article class="sit-card sit-card--mint" data-reveal>
+            <span class="sit-icon sit-icon--mint" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 18h6M10 21h4M12 3a5 5 0 015 5c0 2-1 3.5-2.5 4.5S12 15 12 15s-1-.5-2.5-2.5S7 10 7 8a5 5 0 015-5z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Есть идея, но непонятно, с чего начать</h3>
+            <p>Разложим её на конкретные шаги.</p>
+          </article>
+
+          <article class="sit-card sit-card--sun" data-reveal>
+            <span class="sit-icon sit-icon--sun" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v13H7V3z" stroke="currentColor" stroke-width="1.7"/><path d="M14 3v5h5M10 12h6M10 16h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Есть услуга, но сложно её упаковать</h3>
+            <p>Сформулируем оффер и структуру, чтобы он был понятен и привлекателен.</p>
+          </article>
+
+          <article class="sit-card sit-card--coral" data-reveal>
+            <span class="sit-icon sit-icon--coral" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5M4 19h16M8 14v5M12 10v9M16 7v12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Есть проект, который «застрял»</h3>
+            <p>Найдём узкое место и определим следующий шаг.</p>
+          </article>
+
+          <article class="sit-card sit-card--mint" data-reveal>
+            <span class="sit-icon sit-icon--mint" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 3h6v8a5 5 0 11-6 0V3zM8 21h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Нужно быстро проверить гипотезу</h3>
+            <p>Определим, что стоит тестировать первым и как это сделать просто.</p>
+          </article>
         </div>
+
+        <div class="sit-finale" data-reveal>
+          <div class="sit-finale-mark" aria-hidden="true">
+            <span class="sit-finale-ring sit-finale-ring--a"></span>
+            <span class="sit-finale-ring sit-finale-ring--b"></span>
+            <span class="sit-finale-ring sit-finale-ring--c"></span>
+            <span class="sit-finale-core">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <aside class="sit-finale-card">
+            <p class="sit-finale-label">Разбор</p>
+            <p class="sit-finale-text">Ясный план и уверенный следующий шаг</p>
+          </aside>
+        </div>
+
+        <svg class="sit-route" viewBox="0 0 1000 130" fill="none" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="sitRouteGrad" x1="20" y1="70" x2="960" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#27C7A5"/>
+              <stop offset="0.32" stop-color="#F5B73B"/>
+              <stop offset="0.62" stop-color="#FF8A4C"/>
+              <stop offset="1" stop-color="#FF6846"/>
+            </linearGradient>
+            <filter id="sitNodeGlow" x="-140%" y="-140%" width="380%" height="380%">
+              <feGaussianBlur stdDeviation="3.2" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <!-- Soft sine wave under cards → up to finale -->
+          <path
+            class="sit-route-path"
+            pathLength="1"
+            d="M16 68
+               C 60 68, 60 100, 110 100
+               C 160 100, 160 42, 210 42
+               C 260 42, 260 100, 310 100
+               C 360 100, 360 42, 410 42
+               C 460 42, 460 100, 510 100
+               C 560 100, 560 42, 610 42
+               C 660 42, 660 100, 715 100
+               C 780 100, 840 55, 900 38
+               C 935 28, 960 32, 985 42"
+            stroke="url(#sitRouteGrad)"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+          />
+          <g filter="url(#sitNodeGlow)">
+            <g class="sit-node sit-node--1"><circle cx="110" cy="100" r="11" fill="#27C7A5"/><circle cx="110" cy="100" r="5" fill="#fff"/></g>
+            <g class="sit-node sit-node--2"><circle cx="310" cy="100" r="11" fill="#F5B73B"/><circle cx="310" cy="100" r="5" fill="#fff"/></g>
+            <g class="sit-node sit-node--3"><circle cx="510" cy="100" r="11" fill="#FF8A4C"/><circle cx="510" cy="100" r="5" fill="#fff"/></g>
+            <g class="sit-node sit-node--4"><circle cx="715" cy="100" r="11" fill="#FF6846"/><circle cx="715" cy="100" r="5" fill="#fff"/></g>
+          </g>
+        </svg>
+
+        <!-- Mobile vertical Pulse route -->
+        <svg class="sit-route-mobile" viewBox="0 0 48 1000" fill="none" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="sitRouteGradMob" x1="24" y1="20" x2="24" y2="980" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#27C7A5"/>
+              <stop offset="0.28" stop-color="#F5B73B"/>
+              <stop offset="0.55" stop-color="#FF8A4C"/>
+              <stop offset="1" stop-color="#FF6846"/>
+            </linearGradient>
+          </defs>
+          <path
+            class="sit-route-path"
+            pathLength="1"
+            d="M24 36
+               C 24 70, 10 100, 24 140
+               C 38 180, 24 220, 24 270
+               C 24 320, 10 360, 24 410
+               C 38 460, 24 500, 24 550
+               C 24 600, 10 650, 24 700
+               C 38 750, 24 800, 24 850
+               C 24 900, 18 940, 24 980"
+            stroke="url(#sitRouteGradMob)"
+            stroke-width="3.2"
+            stroke-linecap="round"
+            fill="none"
+          />
+          <g>
+            <g class="sit-node sit-node--1"><circle cx="24" cy="140" r="9" fill="#27C7A5"/><circle cx="24" cy="140" r="4" fill="#fff"/></g>
+            <g class="sit-node sit-node--2"><circle cx="24" cy="320" r="9" fill="#F5B73B"/><circle cx="24" cy="320" r="4" fill="#fff"/></g>
+            <g class="sit-node sit-node--3"><circle cx="24" cy="500" r="9" fill="#FF8A4C"/><circle cx="24" cy="500" r="4" fill="#fff"/></g>
+            <g class="sit-node sit-node--4"><circle cx="24" cy="680" r="9" fill="#27C7A5"/><circle cx="24" cy="680" r="4" fill="#fff"/></g>
+            <g class="sit-node sit-node--5"><circle cx="24" cy="960" r="10" fill="#FF6846"/><circle cx="24" cy="960" r="4.5" fill="#fff"/></g>
+          </g>
+        </svg>
+
+        <span class="sit-dot sit-dot--a" aria-hidden="true"></span>
+        <span class="sit-dot sit-dot--b" aria-hidden="true"></span>
+        <span class="sit-dot sit-dot--c" aria-hidden="true"></span>
       </div>
     </section>
 
@@ -572,9 +749,9 @@
       <div class="book-inner" data-reveal>
         <p class="eyebrow">Запись</p>
         <h2>Готовы к разбору?</h2>
-        <p class="book-lead">Напишите в Telegram — выберем удобное время и ответим на ваши вопросы.</p>
-        <a class="btn btn-primary btn-lg" href="https://t.me/NadezdaBoriskina" target="_blank" rel="noopener">
-          <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <p class="book-lead">Напишите в Telegram — выберем удобное время<br>и ответим на ваши вопросы.</p>
+        <a class="btn btn-primary btn-lg book-cta" href="https://t.me/NadezdaBoriskina" target="_blank" rel="noopener">
+          <svg class="btn-icon book-cta-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             <path d="M22 2L15 22l-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
           </svg>
@@ -584,21 +761,59 @@
           <a href="mailto:bonad6363@gmail.com">Или на почту: bonad6363@gmail.com</a>
         </p>
       </div>
-      <div class="book-visual" aria-hidden="true">
-        <div class="float-chip float-chip--plane-lg" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-4 20-5-9-9-5 18-6z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+      <div class="book-visual" aria-hidden="true" data-reveal>
+        <span class="book-glow book-glow--mint"></span>
+        <span class="book-glow book-glow--peach"></span>
+        <svg class="book-arcs" viewBox="0 0 280 280" fill="none" aria-hidden="true">
+          <path d="M48 195 A 105 105 0 0 1 215 58" stroke="rgba(255,104,70,0.22)" stroke-width="1.25" stroke-linecap="round" fill="none"/>
+          <path d="M32 210 A 130 130 0 0 1 235 42" stroke="rgba(255,138,76,0.14)" stroke-width="1.05" stroke-linecap="round" fill="none"/>
+        </svg>
+        <div class="book-checklist">
+          <span class="book-cl-row"><i class="book-cl-check book-cl-check--mint"></i><i class="book-cl-bar"></i></span>
+          <span class="book-cl-row"><i class="book-cl-check book-cl-check--sun"></i><i class="book-cl-bar book-cl-bar--mid"></i></span>
+          <span class="book-cl-row"><i class="book-cl-check book-cl-check--coral"></i><i class="book-cl-bar book-cl-bar--short"></i></span>
         </div>
-        <div class="device device--cta">
-          <div class="device-screen">
-            <p class="device-title">Готово к записи</p>
-            <ul>
-              <li class="is-done">Тема</li>
-              <li class="is-done">Формат</li>
-              <li>Telegram</li>
-            </ul>
-          </div>
+        <div class="book-plane">
+          <svg viewBox="0 0 96 96" fill="none">
+            <path d="M12 46L84 18L52 82L42 52L12 46z" fill="#fff" stroke="#FF6846" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M42 52L68 30" stroke="#FF8A4C" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M52 82L42 52L68 30" fill="#FF8A4C" opacity="0.28"/>
+          </svg>
         </div>
+        <span class="book-plant"></span>
+        <span class="book-dot book-dot--a"></span>
+        <span class="book-dot book-dot--b"></span>
+        <span class="book-dot book-dot--c"></span>
+        <span class="book-dot book-dot--d"></span>
       </div>
+      <svg class="book-flight" viewBox="0 0 900 360" fill="none" preserveAspectRatio="none" aria-hidden="true">
+        <path
+          class="book-flight-dash"
+          d="M338 238
+             C 405 205, 470 128, 545 92
+             C 585 70, 625 38, 690 28
+             C 755 18, 815 32, 855 68"
+          stroke="rgba(255,104,70,0.62)"
+          stroke-width="2.4"
+          stroke-dasharray="4 7"
+          stroke-linecap="round"
+          fill="none"
+        />
+      </svg>
+      <svg class="book-flight book-flight--mobile" viewBox="0 0 700 320" fill="none" preserveAspectRatio="none" aria-hidden="true">
+        <path
+          class="book-flight-dash"
+          d="M72 208
+             C 160 185, 240 105, 340 78
+             C 410 58, 480 70, 545 112
+             C 585 138, 615 162, 645 185"
+          stroke="rgba(255,104,70,0.58)"
+          stroke-width="2.2"
+          stroke-dasharray="4 7"
+          stroke-linecap="round"
+          fill="none"
+        />
+      </svg>
     </section>
   </main>
 

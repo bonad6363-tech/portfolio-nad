@@ -28,7 +28,14 @@ portfolio-nad/
 │   ├── text-type.js      # анимация печати заголовка
 │   ├── reveal.js         # появление блоков при скролле
 │   └── testimonials.js   # переключение отзывов
-└── images/
+├── images/
+└── pulse/                # кейс: лендинг Pulse (также отдельно: pulse-landing)
+    ├── index.html
+    ├── css/
+    │   ├── style.css
+    │   └── mobile.css
+    ├── js/main.js
+    └── images/
 ```
 
 ## Как открыть
@@ -48,4 +55,4 @@ portfolio-nad/
 ## Автор
 
 **NAD**  
-Telegram: [@yourname](https://t.me/yourname) · Email: hello@yourmail.com
+Telegram: [@NadezdaBoriskina](https://t.me/NadezdaBoriskina) · Email: bonad6363@gmail.com
