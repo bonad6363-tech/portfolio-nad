@@ -141,8 +141,8 @@
     order: 2;
     width: 100%;
     max-width: 420px;
-    margin: 0 auto;
-    min-height: 320px;
+    margin: -28px auto 0;
+    min-height: 290px;
   }
 
   .how-float {
@@ -162,18 +162,51 @@
   }
 
   .how-float--doc {
-    top: -12%;
-    left: 48%;
+    top: 5%;
+    left: auto;
+    right: 18%;
+    width: 54px;
+    height: 54px;
   }
 
   .how-float--cal {
-    top: 14%;
-    right: 0;
+    top: 36%;
+    left: auto;
+    right: 2%;
+    width: 54px;
+    height: 54px;
   }
 
   .how-float--tg {
-    bottom: 2%;
-    right: 0;
+    bottom: 10%;
+    left: auto;
+    right: 16%;
+    width: 54px;
+    height: 54px;
+  }
+
+  .how-visual {
+    top: auto;
+    left: auto;
+    width: 100%;
+    inset: 0;
+    padding: 4px;
+  }
+
+  .how-visual img {
+    width: min(100%, 440px);
+  }
+
+  .how-stage--art {
+    min-height: 360px;
+  }
+
+  .how-float--doc {
+    display: none;
+  }
+
+  .how-stage {
+    overflow: visible;
   }
 
   .how-plant {
@@ -365,7 +398,7 @@
     max-width: 100%;
   }
 
-  .how-laptop {
+  .how-visual {
     max-width: 100%;
   }
 }
@@ -416,7 +449,8 @@
   }
 
   .how-stage {
-    min-height: 290px;
+    min-height: 280px;
+    margin-top: -8px;
   }
 
   .inside-stage {
